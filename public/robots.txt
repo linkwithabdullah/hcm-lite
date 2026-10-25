@@ -1,0 +1,28 @@
+# robots.txt for HCM Lite
+User-agent: *
+Allow: /
+Allow: /login
+Allow: /faq
+Allow: /privacy
+Allow: /terms
+
+# Disallow private HR and employee data routes
+Disallow: /dashboard
+Disallow: /dashboard/*
+Disallow: /employees
+Disallow: /employees/*
+Disallow: /attendance
+Disallow: /attendance/*
+Disallow: /leave
+Disallow: /leave/*
+Disallow: /payroll
+Disallow: /payroll/*
+Disallow: /settings
+Disallow: /settings/*
+Disallow: /users
+Disallow: /users/*
+Disallow: /audit-logs
+Disallow: /audit-logs/*
+Disallow: /api/*
+
+Sitemap: https://hcm-lite.vercel.app/sitemap.xml
