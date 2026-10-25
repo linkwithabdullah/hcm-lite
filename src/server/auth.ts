@@ -7,7 +7,7 @@
 import crypto from 'crypto';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { SqliteDb } from './db';
+import { SqliteDb } from './db.js';
 
 function requireJwtSecret(): string {
   const secret = process.env.JWT_SECRET;

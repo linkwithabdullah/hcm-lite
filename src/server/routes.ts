@@ -5,7 +5,7 @@
 
 import express, { Request, Response, NextFunction } from 'express';
 import crypto from 'crypto';
-import { SqliteDb, serverDb } from './db';
+import { SqliteDb, serverDb } from './db.js';
 import {
   comparePassword,
   createAccessToken,
@@ -19,7 +19,7 @@ import {
   revokeSingleRefreshToken,
   sanitizeUser,
   verifyAccessToken,
-} from './auth';
+} from './auth.js';
 import {
   calculateHaversineDistance,
   computeEmployeePayroll,
@@ -30,8 +30,8 @@ import {
   getMonthWorkingDays,
   isWorkingDay,
   validatePassword,
-} from './rules';
-import { ServerAiService } from './ai';
+} from './rules.js';
+import { ServerAiService } from './ai.js';
 
 export interface AuthenticatedRequest extends Request {
   user?: {
@@ -2030,7 +2030,7 @@ export function createApiRouter(customDb?: SqliteDb): express.Router {
   if (process.env.NODE_ENV !== 'production') router.post('/system/run-tests', requireRole('SUPERADMIN'), async (_req: AuthenticatedRequest, res: Response) => {
     try {
       // Lazy load to prevent cycle
-      const { runTestSuite } = await import('./testRunner');
+      const { runTestSuite } = await import('./testRunner.js');
       const results = await runTestSuite();
       return res.status(200).json({ data: results });
     } catch (err: any) {

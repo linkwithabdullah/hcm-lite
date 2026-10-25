@@ -2,8 +2,8 @@
 import 'dotenv/config';
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
-import { serverDb } from '../src/server/db';
-import { createApiRouter } from '../src/server/routes';
+import { serverDb } from '../src/server/db.js';
+import { createApiRouter } from '../src/server/routes.js';
 
 const app = express();
 app.disable('x-powered-by');

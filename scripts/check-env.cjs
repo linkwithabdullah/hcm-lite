@@ -1,4 +1,5 @@
 /* Minimal local environment preflight, no third-party packages and no secret output. */
+/* Minimal local environment preflight, no third-party packages and no secret output. */
 const fs = require('node:fs');
 const path = require('node:path');
 const file = path.join(process.cwd(),'.env');

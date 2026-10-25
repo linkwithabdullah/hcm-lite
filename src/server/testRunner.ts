@@ -4,8 +4,8 @@
 import 'dotenv/config';
 import express from 'express';
 import { fileURLToPath } from 'node:url';
-import { SqliteDb } from './db';
-import { createApiRouter } from './routes';
+import { SqliteDb } from './db.js';
+import { createApiRouter } from './routes.js';
 export interface TestResult {
   id:string; name:string; action:string; expected:string; actual:string;
   status:'PASS'|'FAIL'; severity:'Critical'|'High'|'Medium'|'Low';

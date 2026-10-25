@@ -2,8 +2,8 @@
 import 'dotenv/config';
 import path from 'node:path';
 import express from 'express';
-import { serverDb } from './src/server/db';
-import app from './api/index';
+import { serverDb } from './src/server/db.js';
+import app from './api/index.js';
 
 async function main() {
   await serverDb.init();

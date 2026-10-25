@@ -6,8 +6,8 @@
  */
 
 import { GoogleGenAI, FunctionDeclaration, Type } from '@google/genai';
-import { SqliteDb } from './db';
-import { countWorkingDays, getMonthWorkingDays, isWorkingDay } from './rules';
+import { SqliteDb } from './db.js';
+import { countWorkingDays, getMonthWorkingDays, isWorkingDay } from './rules.js';
 
 const AI_RATE_LIMIT_PER_HOUR = 20;
 
